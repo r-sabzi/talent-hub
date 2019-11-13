@@ -1,5 +1,6 @@
-import { combineReducers } from 'redux'
+import { combineReducers } from "redux";
+import alert from "./alert";
 
 export default combineReducers({
-  a:()=>5
-})
+  alert
+});
