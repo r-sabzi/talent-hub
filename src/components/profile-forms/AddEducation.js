@@ -17,7 +17,15 @@ const AddEducation = ({ addEducation, history }) => {
 
   const [toDateDisabled, toggleDisabled] = useState(false);
 
-  const { school, degree, fieldofstudy, from, to, current, description } = formData;
+  const {
+    school,
+    degree,
+    fieldofstudy,
+    from,
+    to,
+    current,
+    description
+  } = formData;
 
   const onChange = e =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -26,7 +34,8 @@ const AddEducation = ({ addEducation, history }) => {
     <>
       <h1 class="large text-primary">Add Your Educatione</h1>
       <p class="lead">
-        <i class="fas fa-code-branch"></i> Add any school or bootcamp you have attended
+        <i class="fas fa-code-branch"></i> Add any school or bootcamp you have
+        attended
       </p>
       <small>* = required field</small>
       <form
@@ -86,7 +95,7 @@ const AddEducation = ({ addEducation, history }) => {
                 toggleDisabled(!toDateDisabled);
               }}
             />{" "}
-            Current Program
+            Current School
           </p>
         </div>
         <div class="form-group">
