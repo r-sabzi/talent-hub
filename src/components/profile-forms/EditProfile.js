@@ -48,7 +48,7 @@ const EditProfile = ({
       instagram:
         loading || !profile.social.instagram ? "" : profile.social.instagram
     });
-  }, [loading]);
+  }, [loading, getCurrentProfile]);
 
   const {
     company,
@@ -69,7 +69,7 @@ const EditProfile = ({
     setFormData({ ...formData, [e.target.name]: e.target.value });
   const onSubmit = e => {
     e.preventDefault();
-    createProfile(formData, history,true);
+    createProfile(formData, history, true);
   };
   return (
     <>
